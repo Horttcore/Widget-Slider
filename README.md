@@ -1,4 +1,4 @@
-Widget-Slider
+Widget Slider
 =============
 
 A WordPress Widget to create a slider
@@ -11,11 +11,20 @@ A WordPress Widget to create a slider
 
 ## Screenshots
 
+### Empty widget box
+[![Empty widget box](https://raw.github.com/Horttcore/Widget-Slider/master/screenshot-1.png)](https://raw.github.com/Horttcore/Widget-Slider/master/screenshot-1.png)
 
+### Select post objects for your slider
+[![Select post objects for your slider](https://raw.github.com/Horttcore/Widget-Slider/master/screenshot-2.png)](https://raw.github.com/Horttcore/Widget-Slider/master/screenshot-2.png)
+
+### Widget box with slides
+[![Widget box with slides](https://raw.github.com/Horttcore/Widget-Slider/master/screenshot-3.png)](https://raw.github.com/Horttcore/Widget-Slider/master/screenshot-3.png)
 
 ## Frequently Asked Questions
 
-None yet, if you need some please open an issue with the request.
+### There is no slider in the front end
+
+For compability issues there is no slider library included.
 
 ## Hooks
 
