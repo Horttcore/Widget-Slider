@@ -1,0 +1,19 @@
+.sort-slide {
+	cursor: move;
+}
+
+.remove-slide {
+	color: red;
+	float: right;
+	opacity: 0;
+	transition: opacity .1s;
+}
+
+.slider-list li:hover .remove-slide {
+	opacity: .5;
+}
+
+.slider-list li .remove-slide:hover {
+	color: red;
+	opacity: 1;
+}

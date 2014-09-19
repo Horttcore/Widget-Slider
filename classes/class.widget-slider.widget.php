@@ -65,11 +65,11 @@ class WP_Widget_Slider extends WP_Widget
 			<a class="button thickbox add-slides" href="#TB_inline?width=640&amp;height=auto&amp;inlineId=widget-slider-modal" title="<?php _e( 'Select Slides', 'widget-slider' ); ?>"><?php _e( 'Add Slide', 'widget-slider' ); ?></a>
 		</p>
 
-		<input type="text" class="slider-post-ids" name="<?php echo $this->get_field_name( 'post-ids' ); ?>" id="<?php echo $this->get_field_name( 'post-ids' ); ?>" value="<?php echo $instance['post-ids'] ?>">
+		<input type="hidden" class="slider-post-ids" name="<?php echo $this->get_field_name( 'post-ids' ); ?>" id="<?php echo $this->get_field_name( 'post-ids' ); ?>" value="<?php echo $instance['post-ids'] ?>">
 
 		<?php
 
-	}
+	} // end form
 
 
 
@@ -153,7 +153,7 @@ class WP_Widget_Slider extends WP_Widget
 
 			while ( $query->have_posts() ) : $query->the_post();
 
-				$output .= apply_filters( 'widget-slider-slide-output', get_the_post_thumbnail( get_the_ID(), apply_filters( 'widget-slider-image-size', 'small' ) ) );
+				$output .= apply_filters( 'widget-slider-slide-output', '<a href="' . get_the_permalink( get_the_ID() ) . '">' . get_the_post_thumbnail( get_the_ID(), apply_filters( 'widget-slider-image-size', 'small' ) ) . '</a>' );
 
 			endwhile;
 

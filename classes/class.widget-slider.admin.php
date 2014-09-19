@@ -170,8 +170,6 @@ final class Widget_Slider_Admin
 
 		<div id="widget-slider-modal" style="display: none;">
 
-			<?php do_action( 'widget-slider-modal-search-begin' ) ?>
-
 			<p>
 				<input type="search" value="" id="widget-slider-search" placeholder="<?php _e( 'Search' ); ?>"> <a href="#" class="button" id="widget-slider-search-button"><?php _e( 'Search' ); ?></a>
 			</p>
@@ -183,8 +181,6 @@ final class Widget_Slider_Admin
 				<?php $this->recent_posts(); ?>
 
 			</div>
-
-			<?php do_action( 'widget-slider-modal-search-end' ) ?>
 
 		</div>
 
@@ -205,10 +201,10 @@ final class Widget_Slider_Admin
 	protected function recent_posts()
 	{
 
-		$this->list_search( get_posts( array(
+		$this->list_search( apply_filters( 'widget-slider-recent-posts-query', get_posts( array(
 			'post_type' => 'any',
 			'showposts' => 10,
-		) ) );
+		) ) ) );
 
 	}
 
